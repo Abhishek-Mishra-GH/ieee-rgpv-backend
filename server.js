@@ -16,7 +16,10 @@ app.use(express.json());
 
 // Routes
 const teamRoutes = require('./src/routes/teamRoutes');
+const authRoutes = require('./src/routes/authRoutes');
+
 app.use('/api/teams', teamRoutes);
+app.use('/api/auth', authRoutes);
 
 // listen for requests
 const PORT = process.env.PORT || 3000;
