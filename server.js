@@ -15,8 +15,8 @@ connectDB();
 app.use(express.json());
 
 // Routes
-const studentRoutes = require('./src/routes/studentRoutes');
-app.use('/api/students', studentRoutes);
+const teamRoutes = require('./src/routes/teamRoutes');
+app.use('/api/teams', teamRoutes);
 
 // listen for requests
 const PORT = process.env.PORT || 3000;
