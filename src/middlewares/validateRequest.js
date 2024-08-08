@@ -11,7 +11,8 @@ const teamSchemaZod = z.object({
     year: z.string().min(1),
     startupIdea: z.string().min(1),
     mediumOfReach: z.string().min(1),
-    teamMembers: z.array(z.string().min(1))
+    // max team member is 4
+    teamMembers: z.array(z.string(1)).max(4),
 });
 
 // Middleware for validation

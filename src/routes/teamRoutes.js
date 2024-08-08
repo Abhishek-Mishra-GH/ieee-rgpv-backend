@@ -4,8 +4,7 @@ const teamController = require('../controllers/teamController');
 const validateRequest = require('../middlewares/validateRequest');
 const auth = require('../middlewares/auth');
 
-router.post('/', validateRequest, auth, teamController.createTeam);
 router.get('/', auth, teamController.getTeams);
+router.post('/', validateRequest, teamController.createTeam);
 
 module.exports = router;
-
